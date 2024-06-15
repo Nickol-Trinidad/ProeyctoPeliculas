@@ -1,0 +1,18 @@
+#myBtn {
+  display: none; /* Ocultar el botón por defecto */
+  position: fixed; /* Fijar el botón en la pantalla */
+  bottom: 20px; /* Espacio desde el borde inferior */
+  right: 30px; /* Espacio desde el borde derecho */
+  z-index: 99; /* Asegurarse de que esté por encima de otros elementos */
+  border: none; /* Eliminar borde */
+  outline: none; /* Eliminar borde de enfoque */
+  background-color: #007bff; /* Color de fondo del botón */
+  color: white; /* Color del texto del botón */
+  cursor: pointer; /* Cambiar el cursor al pasar el ratón */
+  padding: 15px; /* Espacio interno del botón */
+  border-radius: 10px; /* Borde redondeado */
+}
+
+#myBtn:hover {
+  background-color: #555; /* Cambiar color de fondo al pasar el ratón */
+}

@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+}
+
+.logo {
+  width: 120px;
+  height: auto;
+}
+
+
+.body {
+  background-color:#1b2024;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  align-items: center;
+  padding: 20px;
+  margin: 0;
+}
+
+h2 {
+  color: #fff;
+}
+h1 {
+  color: #fff;
+}
+
+.title {
+  color: #fff;
+  background-color: #fff;
+}
+
+/* Estilos del buscador */
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.search-container:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.search-input {
+  border: none;
+  padding: 10px 20px;
+  width: 300px;
+  border-radius: 50px 0 0 50px;
+  outline: none;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+.search-input:focus {
+  width: 350px;
+}
+
+.search-input::placeholder {
+  color: #aaa;
+}
+
+.search-button {
+  background-color: #e4d804;
+  border: none;
+  color: rgb(22, 21, 21);
+  padding: 10px 20px;
+  border-radius: 0 50px 50px 0;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #0c0c0b;
+  color: #e4d804;
+  transform: scale(1.05);
+}
+
+.search-button:active {
+  transform: scale(0.95);
+}
+
+/* Estilos de las tarjetas */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.card {
+
+  width: 550px;
+  height: 600px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%; /* Asegúrate de que las imágenes se ajusten al ancho de la tarjeta */
+  height: auto; /* Mantén la proporción de las imágenes */
+}
+
+.card-body {
+  padding: 10px; /* Ajusta el padding dentro de las tarjetas */
+}
+
+.card-title {
+  font-size: 1.1rem; /* Ajusta el tamaño del texto del título */
+  margin-bottom: 0.5rem; /* Añade espacio debajo del título */
+}
+
+/* Estilos para el botón "Unirte al Club" */
+.hidden-btn {
+  display: none; /* Oculta el botón por defecto */
+  position: absolute; /* Posiciona el botón relativamente al contenedor .card */
+  top: 50%; /* Ajusta la posición del botón dentro de la tarjeta */
+  left: 50%; /* Centra el botón horizontalmente */
+  transform: translate(-50%, -50%); /* Centra el botón completamente */
+  font-size: 0.9rem; /* Ajusta el tamaño del texto del botón */
+  padding: 5px 10px; /* Ajusta el padding del botón */
+  z-index: 1; /* Asegúrate de que el botón esté por encima de otros elementos */
+  background-color: white;
+  color: #1f283f;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card:hover .hidden-btn {
+  display: block;
+}

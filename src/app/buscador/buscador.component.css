@@ -1,0 +1,52 @@
+
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px; /* Espacio entre tarjetas */
+  justify-content: center; /* Centra las tarjetas en el contenedor */
+}
+
+/* Estilos para las tarjetas */
+.card {
+  width: 14rem; /* Ajusta el ancho de las tarjetas */
+  box-sizing: border-box; /* Incluye el padding y el borde en el tamaño total de la tarjeta */
+  border: 1px solid #ccc; /* Añade un borde a las tarjetas */
+  border-radius: 8px; /* Añade un borde redondeado a las tarjetas */
+  overflow: hidden; /* Asegúrate de que el contenido no se desborde */
+  position: relative; /* Necesario para posicionar el botón absolutamente dentro de la tarjeta */
+}
+
+/* Estilos para las imágenes de las tarjetas */
+.card img {
+  width: 100%; /* Asegúrate de que las imágenes se ajusten al ancho de la tarjeta */
+  height: auto; /* Mantén la proporción de las imágenes */
+}
+
+/* Estilos para el cuerpo de las tarjetas */
+.card-body {
+  padding: 10px; /* Ajusta el padding dentro de las tarjetas */
+}
+
+/* Estilos para los títulos de las tarjetas */
+.card-title {
+  font-size: 1.1rem; /* Ajusta el tamaño del texto del título */
+  margin-bottom: 0.5rem; /* Añade espacio debajo del título */
+}
+
+/* Estilos para el botón "Unirte al Club" */
+.hidden-btn {
+  display: none; /* Oculta el botón por defecto */
+  position: absolute; /* Posiciona el botón relativamente al contenedor .card */
+  top: 50%; /* Ajusta la posición del botón dentro de la tarjeta */
+  left: 50%; /* Centra el botón horizontalmente */
+  transform: translate(-50%, -50%); /* Centra el botón completamente */
+  font-size: 0.9rem; /* Ajusta el tamaño del texto del botón */
+  padding: 5px 10px; /* Ajusta el padding del botón */
+  z-index: 1; /* Asegúrate de que el botón esté por encima de otros elementos */
+}
+
+/* Muestra el botón cuando se pasa el ratón sobre la tarjeta */
+.card:hover .hidden-btn {
+  display: block;
+}

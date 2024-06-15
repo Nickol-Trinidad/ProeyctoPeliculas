@@ -1,0 +1,191 @@
+
+
+.card-container {
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: none; /* Eliminar el fondo */
+
+}
+
+.card {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  margin: auto;
+  padding: auto;
+  background-color: #212025;
+}
+
+.card h2 {
+  margin-top: 10px;
+  color: #333;
+}
+
+.comments-container {
+  width: 100%;
+  max-width: 450px;
+  margin: 15px auto;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  top: 50px;
+}
+
+.comments-container h1 {
+  color: #f7f8fa;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.comments-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.comments-container label {
+  margin: 10px 0 7px;
+  font-weight: bold;
+  color: white;
+}
+
+.form-group {
+  margin-bottom: 15px; /* Espacio entre grupos de etiqueta y entrada */
+}
+
+label {
+  display: block; /* Para que el label ocupe toda la línea */
+  margin-bottom: 5px; /* Espacio inferior entre etiqueta y entrada */
+  font-weight: bold;
+}
+
+input[type="text"],
+textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box; /* Incluye el padding y borde en el ancho total */
+  font-size: 16px;
+}
+
+.comments-container input{
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #dcdcdf; /* Color del borde de la crítica */
+  font-size: 16px;
+  background-color: #dcdcdf;
+  transition: border-color 0.3s;
+}
+
+#criticatext{
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #dcdcdf;
+  font-size: 16px;
+  background-color: #dcdcdf;
+  color: #212025;
+  transition: border-color 0.3s;
+
+}
+
+.comments-container input:focus,
+.comments-container textarea:focus {
+  border-color:#e6f330;
+  outline: none;
+}
+
+
+#boton {
+  padding: 10px;
+  background-color: #e4d804;
+  color: #080808;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #e4d804;
+}
+
+
+.card-container2 {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px 0;
+  padding: 20px;
+  resize: none; /* Evitar el cambio de tamaño manual */
+  min-height: 100px;
+}
+
+.card-container2 ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.card-container2 li {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: none;
+
+}
+
+.card-container2 li:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.card-container2 p {
+  margin: 5px 0;
+  color: #faf8f8;
+}
+
+.card-container2 p strong {
+  color: #e4d804;
+}
+
+
+.card2-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+  background: none;
+  width: 390px;
+  height: 350px;
+}
+
+
+.card2-container img {
+  width: 100%; /* Asegúrate de que las imágenes se ajusten al ancho de la tarjeta */
+  height: auto; /* Mantén la proporción de las imágenes */
+  object-fit: cover; /* Asegúrate de que las imágenes se ajusten bien dentro del contenedor */
+
+}
+
+
+.comments-container h5{
+  color: #e4d804;
+  text-align: center;
+
+}
+
+.comments-container h3{
+  color: #e4d804;
+  text-align: center;
+
+}

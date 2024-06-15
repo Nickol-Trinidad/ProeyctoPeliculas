@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css1/critica.css">
+    <title>Imagen y Comentarios</title>
+</head>
+
+<body>
+
+    <div class="card2-container">
+        <img src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}" alt="Movie Poster" id="img">
+    </div>
+
+    <div class="comments-container">
+      <form (ngSubmit)="submitCritica()">
+        <h3>Club de Debate</h3>
+        <div class="form-group">
+              <h5>Titulo: {{ movie.title }}</h5>
+              <br>
+                <label for="userId">Usuario: </label>
+                <input type="text" id="userId" [(ngModel)]="userId" name="userId" placeholder="usuario@gmail.com" required>
+            </div>
+            <div>
+                <label for="criticatext">Comentario:</label>
+                <textarea name="criticatext" id="criticatext" [(ngModel)]="criticatext" placeholder="Escribe tu comentario aquí..." required></textarea>
+            </div>
+            <button id="boton" type="submit">Enviar Comentario</button>
+        </form>
+    </div>
+
+    <div class="card-container2">
+        <ul>
+            <li *ngFor="let critica of searchCriticas">
+                <p><strong>Usuario:</strong> {{critica.userId}}</p>
+                <p><strong>Comentario:</strong> {{critica.criticatext}}</p>
+            </li>
+        </ul>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

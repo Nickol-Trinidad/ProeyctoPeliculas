@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscador Atractivo</title>
+  <link rel="stylesheet" href="/assets/css1/estilo.css">
+</head>
+<body>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <div class="search-container">
+    <input [(ngModel)]="searchQuery" type="text" class="search-input" (keyup.enter)="onSearch()"  placeholder="Escribe el nombre de una película">
+    <button (click)="onSearch()" class="search-button">Buscar</button>
+
+
+  </div>
+
+
+  <div class="card-container">
+    <div *ngFor="let movie of searchResults" class="card">
+      <li class="input-group-mb3">
+        <div *ngIf="movie.poster_path">
+          <img src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}" alt="Movie Poster">
+        </div>
+        <a [routerLink]="['/critica' ,movie.id]" class="btn btn-primary hidden-btn">Unirte al Club</a>
+      </li>
+    </div>
+  </div>
+</body>
+</html>
+

@@ -1,0 +1,170 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>CineForum</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/images1/favicon.png">
+  <link rel="stylesheet" href="/assets/css1/estilo2.css">
+</head>
+
+<body>
+
+  <main>
+    <!-- banner-area -->
+    <section class="banner-area banner-bg" data-background="assets/images1/CO.png">
+      <div class="container custom-container">
+        <div class="row">
+          <div class="col-xl-6 col-lg-8">
+            <div class="banner-content">
+              <h2 class="title wow fadeInUp" data-wow-delay=".4s" data-wow-duration="1.8s">!El lugar donde las
+                <span>ideas</span> se encuentran y las opiniones se desafían!
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="ucm-area ucm-bg" data-background="/assets/images1/ucm_bg.jpg">
+      <div class="ucm-bg-shape" data-background="/assets/images1/ucm_bg_shape.png"></div>
+      <section class="services-area services-bg" data-background="/assets/images1/services_bg.jpg">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <div class="services-img-wrap">
+                <div class="card2-container">
+                  <div class="card2">
+                    <li class="input-group-mb3">
+                      <div *ngIf="searchResults.length > 0 && searchResults[0].poster_path">
+                        <img src="https://image.tmdb.org/t/p/w500/{{ searchResults[0].poster_path }}"
+                          alt="Movie Poster">
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title">{{ searchResults[0].original_title }}</h5>
+                        <p class="card-text">{{ searchResults[0].overview }}</p>
+                      </div>
+                    </li>
+                  </div>
+                </div>
+
+                <a href="" class="download-btn" download>Unirse Club Lectura</a>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="services-content-wrap">
+                <div class="section-title title-style-two mb-20">
+                  <span class="sub-title">Clubs</span>
+                  <h2 class="title">Descubre nuevas historias, comparte tus favoritas.</h2>
+                </div>
+                <p>¡Bienvenidos al Club de Películas!
+
+                  En este espacio, nos sumergimos en el fascinante mundo del cine, donde cada película es una ventana a
+                  nuevas aventuras, emociones y reflexiones. Aquí, compartimos nuestra pasión por el séptimo arte y
+                  exploramos juntos un sinfín de historias que nos inspiran, nos hacen reír, llorar y reflexionar.</p>
+                <div class="services-list">
+                  <ul>
+                    <li>
+                      <div class="icon">
+                        <img src="/assets/images1/entrar.png" alt="">
+                      </div>
+                      <div class="content">
+                        <h5 id="h5">¿A qué esperas? Unete Ya!</h5>
+                        <p id="parrafo">Comienza a disfrutar de una experiencia cinematográfica inigualable.</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- services-area-end -->
+
+    </section>
+    <!-- up-coming-movie-area-end -->
+
+    <!-- services-area -->
+
+    <!-- top-rated-movie -->
+    <section class="top-rated-movie tr-movie-bg" data-background="/assets/images1/tr_movies_bg.jpg">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="section-title text-center mb-50">
+              <h2 class="sub-title">TOP PELICULAS</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="tr-movie-menu-active text-center">
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card1-container">
+        <div *ngFor="let movie of searchResults.slice(0, 6)" class="card1">
+          <li class="input-group-mb3">
+            <div *ngIf="movie.poster_path">
+              <img src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}" alt="Movie Poster">
+            </div>
+            <a [routerLink]="['/critica', movie.id]" class="btn btn-primary hidden-btn">Unirte al Club</a>
+          </li>
+        </div>
+      </div>
+    </section>
+
+    <!-- tv-series-area -->
+    <section class="tv-series-area tv-series-bg" data-background="/assets/images1/tv_series_bg.jpg">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="section-title text-center mb-50">
+              <span class="sub-title"> Hitch, especialista(2005)</span>
+              <h1 class="title">"La vida no se mide por las veces que respiras, sino por los momentos que te dejan sin aliento."</h1>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="card-container">
+          <div *ngFor="let movie of searchResults.slice(5, 17)" class="card">
+            <li class="input-group-mb3">
+              <div *ngIf="movie.poster_path">
+                <img src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}" alt="Movie Poster">
+              </div>
+            </li>
+          </div>
+        </div>
+      </div>
+
+  <button onclick="scrollToTop()" id="myBtn" title="Go to top">Top</button>
+    </section>
+    <!-- newsletter-area-end -->
+
+  </main>
+
+
+  <script>
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // Para un desplazamiento suave
+    });
+  }
+</script>
+
+  <!-- footer-area-end -->
+</body>
+
+</html>

@@ -1,0 +1,280 @@
+* {
+  box-sizing: border-box;
+}
+
+.body {
+  background-color:#1b2024;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin: 0;
+}
+
+h5 {
+  color: #1d1c1c;
+}
+
+h2{
+  color:white;
+}
+h1{
+  color:#141414
+}
+
+#h5{
+  color: white;
+}
+
+#parrafo{
+  color: yellow;
+}
+/* Estilos de las tarjetas */
+/* Estilos de las tarjetas */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.card {
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%; /* Asegúrate de que las imágenes se ajusten al ancho de la tarjeta */
+  height: auto; /* Mantén la proporción de las imágenes */
+}
+
+.card-body {
+  padding: 10px; /* Ajusta el padding dentro de las tarjetas */
+}
+
+.card-title {
+  font-size: 1.1rem; /* Ajusta el tamaño del texto del título */
+  margin-bottom: 0.5rem; /* Añade espacio debajo del título */
+}
+
+/* Estilos para el botón "Unirte al Club" */
+.hidden-btn {
+  display: none; /* Oculta el botón por defecto */
+  position: absolute; /* Posiciona el botón relativamente al contenedor .card */
+  top: 50%; /* Ajusta la posición del botón dentro de la tarjeta */
+  left: 50%; /* Centra el botón horizontalmente */
+  transform: translate(-50%, -50%); /* Centra el botón completamente */
+  font-size: 0.9rem; /* Ajusta el tamaño del texto del botón */
+  padding: 5px 10px; /* Ajusta el padding del botón */
+  z-index: 1; /* Asegúrate de que el botón esté por encima de otros elementos */
+  background-color: white;
+  color: #1f283f;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card:hover .hidden-btn {
+  display: block;
+}
+
+
+.sub-title{
+  color: #1f283f;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Columnas automáticas con un mínimo de 200px */
+  gap: 10px; /* Espacio entre las tarjetas */
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden; /* Evita que las imágenes se desborden */
+}
+
+.movie img {
+  width: 100%; /* Ajusta la imagen al ancho del contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.d-block{
+width: 350px;
+  height: 450px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+
+/* Estilos de las tarjetas */
+.card1-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 5px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.card1 {
+  width: 100%;
+  width: 220px;
+  height: 350px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.card1:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+}
+
+.poster {
+  width: 100%;
+  height: auto;
+}
+
+.poster img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card1:hover .poster img {
+  transform: scale(1.1);
+}
+
+.hidden-btn {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.9rem;
+  padding: 5px 10px;
+  z-index: 1;
+  background-color: white;
+  color: #1f283f;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card1:hover .hidden-btn {
+  display: block;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #141414;
+}
+
+.sub-title {
+  color: #1f283f;
+}
+
+.card-overview {
+  font-size: 0.75rem;
+  color: #333;
+  text-align: justify;
+  max-height: 50px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card2-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.card2 {
+  width: 100%;
+  width: 550px;
+  height: 650px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+.card2 img {
+  width: 100%; /* Asegúrate de que las imágenes se ajusten al ancho de la tarjeta */
+  height: auto; /* Mantén la proporción de las imágenes */
+}
+
+#entrar{
+  width: 90%; /* Asegúrate de que las imágenes se ajusten al ancho de la tarjeta */
+  height: auto;
+}
+
+.card2:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+}
+
+
+.card2:hover .poster img {
+  transform: scale(1.1);
+}
+
+.card2:hover .hidden-btn {
+  display: block;
+}
+
+#myBtn {
+  display: none; /* Ocultar el botón por defecto */
+  position: fixed; /* Fijar el botón en la esquina inferior derecha */
+  bottom: 20px;
+  right: 30px;
+  z-index: 99; /* Asegurar que el botón esté por encima de otros elementos */
+  border: none;
+  outline: none;
+  background-color: #007bff; /* Color de fondo del botón */
+  color: white; /* Color del texto del botón */
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50%;
+}
+
+#myBtn:hover {
+  background-color: #0056b3;
+}
+.logo {
+  width: 120px;
+  height: auto;
+}
