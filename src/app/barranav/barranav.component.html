@@ -4,13 +4,10 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Movflx - Online Movies & TV Shows Template</title>
+  <title>CineForum</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <link rel="shortcut icon" type="image/x-icon" href="/assets/images1/favicon.png">
-  <!-- Place favicon.ico in the root directory -->
-
   <!-- CSS here -->
   <link rel="stylesheet" href="/assets/css1/bootstrap.min.css">
   <link rel="stylesheet" href="/assets/css1/animate.min.css">
@@ -27,7 +24,6 @@
 </head>
 
 <body>
-
   <!-- header-area -->
   <header>
     <div id="sticky-header" class="menu-area transparent-header">
@@ -40,46 +36,28 @@
                 <div class="logo">
                   <a href="index.html">
                     <img src="/assets/images1/Cineforumlogo.png" alt="Logo" class="logo">
-
                   </a>
                 </div>
                 <div class="navbar-wrap main-menu d-none d-lg-flex">
                   <ul class="navigation">
-                    <li class="active menu-item-has-children"> <a [routerLink]="['home']" class="nav-link">Inicio</a>
-
-                    </li>
-                    <li class="menu-item-has-children"> <a [routerLink]="['movies']" class="nav-link">Peliculas</a>
-
-                    </li>
-
-                    <li class="menu-item-has-children"> <a [routerLink]="['estrenos']" class="nav-link">Estrenos2024</a>
-
-                    </li>
+                    <li class="active menu-item-has-children"><a [routerLink]="['home']">Inicio</a></li>
+                    <li class="menu-item-has-children"><a [routerLink]="['movies']" >Películas</a></li>
+                    <li class="menu-item-has-children"><a [routerLink]="['estrenos']">Estrenos 2024</a></li>
                     <li><a href="http://localhost:8000/support/ticket/new">Soporte</a></li>
-
-
-
-
                   </ul>
-
                 </div>
                 <div class="header-action d-none d-md-block">
                   <ul>
-
-                    <div class="input-group mb-3">
-                      <a [routerLink]="['buscador']" ><img src="/assets/images1/lupa.png" alt="Icono de Freepik" class="header-btn" ></a>
-                    </div>
-
-
-                    <div class="input-group mb-3">
-
-
-                      <li class="header-btn"><a href="http://localhost:8000/login" class="btn">Iniciar Sesion</a></li>
-                    </div>
-
-
-
+                    <li class="header-btn"><a href="http://localhost:8000/login" class="btn">Iniciar Sesión</a></li>
                   </ul>
                 </div>
               </nav>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <script src="script.js"></script>
+</body>
+</html>
